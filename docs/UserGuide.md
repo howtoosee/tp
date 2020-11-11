@@ -12,7 +12,7 @@ https://github.com/AY2021S1-CS2103T-W16-3/tp/pull/179/commits/aec461182c194c9ca2
 
 ---
 
-## 1. Using this User-Guide
+## 1. Using this User-Guide [Lim Yu Yang]
 
 This User-Guide aims to aid users in using NUStorage to its fullest potential. In this guide, we will be guiding you through the entire process of using NUStorage, from setting it up on your system to the using the features that NUStorage offers.
 
@@ -20,7 +20,7 @@ If you are a new user, we recommend that you read this user guide from start to 
 
 If you see an acronym that you don't understand, kindly refer to the [glossary](#8-glossary-and-terms). If you have further questions regarding NUStorage or this User-Guide, feel free to contact us at _nustorage.support@u.nus.edu_.
 
-## 2. Introduction
+## 2. Introduction [Lim Yu Yang]
 
 Welcome to NUStorage, a desktop application that aims to help users to manage __inventory__, __finance transactions__ as well as __accounts__.
 
@@ -34,7 +34,7 @@ Interested? Read on to get [started](#3-quick-start-guide)!
 
 ---
 
-## 3. Quick Start Guide
+## 3. Quick Start Guide [Chen Xihao]
 
 1. Ensure that you have `Java 11` or above installed on your device.
 2. Download the latest release of `NUStorage.jar` [here](https://github.com/AY2021S1-CS2103T-T11-3/tp/releases).
@@ -56,7 +56,7 @@ Interested? Read on to get [started](#3-quick-start-guide)!
 
 ---
 
-## 4. Command Formats
+## 4. Command Formats [Chen Xihao]
 
 This section details the notations used to specify the command formats in the [commands](#5-commands) and [commands summary](#6-commands-summary) sections.
 
@@ -111,7 +111,7 @@ NUStorage supports the storage and manipulation of inventory records. The follow
 
 Commands in this section are best executed when you are in the inventory tab. If you do not know how to switch to the inventory tab, please refer to the [switch between tabs](#534-switch-tabs-switch) section for more information.
 
-#### 5.1.1. Add items to inventory: `create_inventory`
+#### 5.1.1. Add items to inventory: `create_inventory` [Goh Ee Liang]
 
 NUStorage allows you to add and save a new inventory record. Each inventory record has a finance record tied to it.
 
@@ -147,7 +147,7 @@ A corresponding finance record of total cost `200` is added to the finance accou
 
 ---
 
-#### 5.1.2. Remove items from inventory: `delete_inventory`
+#### 5.1.2. Remove items from inventory: `delete_inventory` [Goh Ee Liang]
 
 Previously in the [Add Inventory Records](#511-add-items-to-inventory-create_inventory) section, we have created a new inventory record, and its accompanying finance record. Now, let's try to delete the records from NUStorage using `delete_inventory`.
 
@@ -179,7 +179,7 @@ The corresponding finance record is also deleted.
 
 ---
 
-#### 5.1.3. Edit record in inventory: `edit_inventory`
+#### 5.1.3. Edit record in inventory: `edit_inventory` [Goh Ee Liang]
 
 Previously in the [Delete Inventory Records](#512-remove-items-from-inventory-delete_inventory) section, we have deleted one of our inventory records. For this section, ensure that you have at least one inventory record.
 
@@ -217,7 +217,7 @@ The corresponding finance record is also updated to reflect the new total cost o
 
 ---
 
-#### 5.1.4. Find record in inventory: `find_inventory`
+#### 5.1.4. Find record in inventory: `find_inventory` [Lim Yu Yang]
 
 Previously in the [Edit Inventory Records](#513-edit-record-in-inventory-edit_inventory) section, we have learnt how to edit inventory records.
 Now, we are going to learn how to navigate through your inventory records using the `find_inventory` command.
@@ -253,7 +253,7 @@ __Result:__ All inventory records with item names that contain `ip` are listed.
 
 ---
 
-#### 5.1.5. List inventory records: `list_inventory`
+#### 5.1.5. List inventory records: `list_inventory` [Chen Xihao]
 
 Previously, in the [Find Inventory Records](#514-find-record-in-inventory-find_inventory) section, we have seen how we can find specific records using a specified keyword.
 However, this results in NUStorage only displaying records with item names that contain the keyword.
@@ -287,7 +287,7 @@ __Result:__ All inventory records are listed.
 
 ---
 
-#### 5.1.6. Update inventory record: `update_inventory`
+#### 5.1.6. Update inventory record: `update_inventory` [Chen Xihao]
 
 In the [Edit Inventory Command](#513-edit-record-in-inventory-edit_inventory) section, we have learnt how to edit values and names of our inventory records.
 However, in many situations we would only need to update the quantity stored in the record based on the change in our inventory stock.
@@ -341,7 +341,7 @@ If you do not know how to switch to the finance tab, please refer to the [switch
 
 **NOTE:** Some commands only work for [stand-alone finance records](#8-glossary-and-terms) (i.e. finance records that are not attached to any inventory records).
 
-#### 5.2.1. Add finance records: `add_finance`
+#### 5.2.1. Add finance records: `add_finance` [Tan Pinxi]
 
 NUStorage allows you to add and save a new finance record into the account.
 In the [Add Inventory Record](#511-add-items-to-inventory-create_inventory) section, we have seen how a finance record is added when an inventory record is created to reflect the changes in the finance account.
@@ -377,7 +377,7 @@ __Result:__ Finance record of amount `30000` on `3rd March 2020` is added to the
 
 ---
 
-#### 5.2.2. Delete finance records: `delete_finance`
+#### 5.2.2. Delete finance records: `delete_finance` [Tan Pinxi]
 
 Previously, in the [Add Finance Records](#521-add-finance-records-add_finance) section, we have created a finance record.
 Now, let's try to delete it from NUStorage using `delete_finance`.
@@ -410,7 +410,7 @@ __Result:__ Finance record at index `1` is removed from the finance account.
 
 ---
 
-#### 5.2.3. Edit a finance record: `edit_finance`
+#### 5.2.3. Edit a finance record: `edit_finance` [Tan Pinxi]
 
 Previously, in the [Delete Finance Records](#522-delete-finance-records-delete_finance) section, we have deleted our only finance record in our application.
 For this section, ensure you have at least one **stand-alone** finance record (i.e not attached to any inventory records) stored in the application and that you are on the finance tab.
@@ -447,7 +447,7 @@ __Result:__ Finance amount changed from `100` to `120` while the date remains un
 
 ---
 
-#### 5.2.4. Find a finance record with a specified keyword: `find_finance`
+#### 5.2.4. Find a finance record with a specified keyword: `find_finance` [Lim Yu Yang]
 
 Previously, in the [Edit Finance Records](#523-edit-a-finance-record-edit_finance) section, we have learnt how to edit a stand-alone finance record.
 For this section, let us first add some more finance records to populate our finance account.
@@ -485,7 +485,7 @@ __Result:__ Finance records that fit the parameters are listed. Below shows the 
 
 ---
 
-#### 5.2.5. List finance records: `list_finance`
+#### 5.2.5. List finance records: `list_finance` [Lim Yu Yang]
 
 Previously, in the [Find Finance Records](#524-find-a-finance-record-with-a-specified-keyword-find_finance) section, we have learnt how to find certain finance records that contains our provided parameters.
 For this section, we will be reusing the examples from the [Find Finance Records](#524-find-a-finance-record-with-a-specified-keyword-find_finance) section.
@@ -515,7 +515,7 @@ __Result:__ All finance records are listed.
 
 ---
 
-### 5.3. Universal Commands
+### 5.3. Universal Commands [Dora Heng]
 
 The following are universal commands for navigating the application.
 
@@ -616,7 +616,7 @@ __Result:__ The previous command is undone / redone.
 
 ---
 
-## 6. Commands Summary
+## 6. Commands Summary [Chen Xihao]
 
 This section gives a summarised view of the commands available in NUStorage.
 
@@ -658,7 +658,7 @@ The following table gives a summary of the [__universal commands__](#53-universa
 
 ---
 
-## 7. FAQs
+## 7. FAQs [Chen Xihao]
 
 This section answers some of the _frequently asked questions_.
 
@@ -693,7 +693,7 @@ Modifying the storage file is possible but NOT RECOMMENDED!
 
 ---
 
-## 8. Glossary and Terms
+## 8. Glossary and Terms [Chen Xihao]
 
 1. `CLI`: command line interface.
 2. `GUI`: graphical user interface.
