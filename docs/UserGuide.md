@@ -3,46 +3,12 @@ layout: page
 title: User Guide
 ---
 <!-- TOC adapted from
-https://github.com/AY2021S1-CS2103T-W16-3/tp/pull/179/commits/aec461182c194c9ca2c67d7c407fcabb376191ff
+https://github.com/AY2021S1-CS2103T-W16-3/tp/pull/179/commits/aec461182c194c9ca2c67d7c407fcabb376191ff -->
 
 <div class="toc-no-bullet-points">
   * Table of Contents
   {:toc}
-</div> -->
-
-- [1. Using this User-Guide [Lim Yu Yang]](#1-using-this-user-guide-lim-yu-yang)
-- [2. Introduction [Lim Yu Yang]](#2-introduction-lim-yu-yang)
-- [3. Quick Start Guide [Chen Xihao]](#3-quick-start-guide-chen-xihao)
-- [4. Command Formats [Chen Xihao]](#4-command-formats-chen-xihao)
-- [5. Commands](#5-commands)
-  - [5.1. Inventory Commands](#51-inventory-commands)
-    - [5.1.1. Add items to inventory: `create_inventory` [Goh Ee Liang]](#511-add-items-to-inventory-create_inventory-goh-ee-liang)
-    - [5.1.2. Remove items from inventory: `delete_inventory` [Goh Ee Liang]](#512-remove-items-from-inventory-delete_inventory-goh-ee-liang)
-    - [5.1.3. Edit record in inventory: `edit_inventory` [Goh Ee Liang]](#513-edit-record-in-inventory-edit_inventory-goh-ee-liang)
-    - [5.1.4. Find record in inventory: `find_inventory` [Lim Yu Yang]](#514-find-record-in-inventory-find_inventory-lim-yu-yang)
-    - [5.1.5. List inventory records: `list_inventory` [Chen Xihao]](#515-list-inventory-records-list_inventory-chen-xihao)
-    - [5.1.6. Update inventory record: `update_inventory` [Chen Xihao]](#516-update-inventory-record-update_inventory-chen-xihao)
-  - [5.2. Finance Commands](#52-finance-commands)
-    - [5.2.1. Add finance records: `add_finance` [Tan Pinxi]](#521-add-finance-records-add_finance-tan-pinxi)
-    - [5.2.2. Delete finance records: `delete_finance` [Tan Pinxi]](#522-delete-finance-records-delete_finance-tan-pinxi)
-    - [5.2.3. Edit a finance record: `edit_finance` [Tan Pinxi]](#523-edit-a-finance-record-edit_finance-tan-pinxi)
-    - [5.2.4. Find a finance record with a specified keyword: `find_finance` [Lim Yu Yang]](#524-find-a-finance-record-with-a-specified-keyword-find_finance-lim-yu-yang)
-    - [5.2.5. List finance records: `list_finance` [Lim Yu Yang]](#525-list-finance-records-list_finance-lim-yu-yang)
-  - [5.3. Universal Commands [Dora Heng]](#53-universal-commands-dora-heng-dora-heng)
-    - [5.3.1. Clear records: `clear`](#531-clear-records-clear)
-    - [5.3.2. Quit the programme: `exit`](#532-quit-the-programme-exit)
-    - [5.3.3. Get help on the commands: `help`](#533-get-help-on-the-commands-help)
-    - [5.3.4. Switch tabs: `switch`](#534-switch-tabs-switch)
-    - [5.3.5. Undo/Redo the previous command: `undo`/`redo`[coming in v2.0]](#535-undoredo-the-previous-command-undoredocoming-in-v20)
-- [6. Commands Summary [Chen Xihao]](#6-commands-summary-chen-xihao)
-  - [6.1. Inventory Commands Summary](#61-inventory-commands-summary)
-  - [6.2. Finance Commands Summary](#62-finance-commands-summary)
-  - [6.3. Universal Commands Summary](#63-universal-commands-summary)
-- [7. FAQs [Chen Xihao]](#7-faqs-chen-xihao)
-  - [7.1. How do I migrate the data to another computer?](#71-how-do-i-migrate-the-data-to-another-computer)
-  - [7.2. How do I combine data from two devices?](#72-how-do-i-combine-data-from-two-devices)
-  - [7.3. Can I directly modify the storage file?](#73-can-i-directly-modify-the-storage-file)
-- [8. Glossary and Terms [Chen Xihao]](#8-glossary-and-terms-chen-xihao)
+</div>
 
 ---
 
