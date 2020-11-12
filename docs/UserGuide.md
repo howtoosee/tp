@@ -4,11 +4,45 @@ title: User Guide
 ---
 <!-- TOC adapted from
 https://github.com/AY2021S1-CS2103T-W16-3/tp/pull/179/commits/aec461182c194c9ca2c67d7c407fcabb376191ff
--->
+
 <div class="toc-no-bullet-points">
   * Table of Contents
   {:toc}
-</div>
+</div> -->
+
+- [1. Using this User-Guide [Lim Yu Yang]](#1-using-this-user-guide-lim-yu-yang)
+- [2. Introduction [Lim Yu Yang]](#2-introduction-lim-yu-yang)
+- [3. Quick Start Guide [Chen Xihao]](#3-quick-start-guide-chen-xihao)
+- [4. Command Formats [Chen Xihao]](#4-command-formats-chen-xihao)
+- [5. Commands](#5-commands)
+  - [5.1. Inventory Commands](#51-inventory-commands)
+    - [5.1.1. Add items to inventory: `create_inventory` [Goh Ee Liang]](#511-add-items-to-inventory-create_inventory-goh-ee-liang)
+    - [5.1.2. Remove items from inventory: `delete_inventory` [Goh Ee Liang]](#512-remove-items-from-inventory-delete_inventory-goh-ee-liang)
+    - [5.1.3. Edit record in inventory: `edit_inventory` [Goh Ee Liang]](#513-edit-record-in-inventory-edit_inventory-goh-ee-liang)
+    - [5.1.4. Find record in inventory: `find_inventory` [Lim Yu Yang]](#514-find-record-in-inventory-find_inventory-lim-yu-yang)
+    - [5.1.5. List inventory records: `list_inventory` [Chen Xihao]](#515-list-inventory-records-list_inventory-chen-xihao)
+    - [5.1.6. Update inventory record: `update_inventory` [Chen Xihao]](#516-update-inventory-record-update_inventory-chen-xihao)
+  - [5.2. Finance Commands](#52-finance-commands)
+    - [5.2.1. Add finance records: `add_finance` [Tan Pinxi]](#521-add-finance-records-add_finance-tan-pinxi)
+    - [5.2.2. Delete finance records: `delete_finance` [Tan Pinxi]](#522-delete-finance-records-delete_finance-tan-pinxi)
+    - [5.2.3. Edit a finance record: `edit_finance` [Tan Pinxi]](#523-edit-a-finance-record-edit_finance-tan-pinxi)
+    - [5.2.4. Find a finance record with a specified keyword: `find_finance` [Lim Yu Yang]](#524-find-a-finance-record-with-a-specified-keyword-find_finance-lim-yu-yang)
+    - [5.2.5. List finance records: `list_finance` [Lim Yu Yang]](#525-list-finance-records-list_finance-lim-yu-yang)
+  - [5.3. Universal Commands [Dora Heng]](#53-universal-commands-dora-heng-dora-heng)
+    - [5.3.1. Clear records: `clear`](#531-clear-records-clear)
+    - [5.3.2. Quit the programme: `exit`](#532-quit-the-programme-exit)
+    - [5.3.3. Get help on the commands: `help`](#533-get-help-on-the-commands-help)
+    - [5.3.4. Switch tabs: `switch`](#534-switch-tabs-switch)
+    - [5.3.5. Undo/Redo the previous command: `undo`/`redo`[coming in v2.0]](#535-undoredo-the-previous-command-undoredocoming-in-v20)
+- [6. Commands Summary [Chen Xihao]](#6-commands-summary-chen-xihao)
+  - [6.1. Inventory Commands Summary](#61-inventory-commands-summary)
+  - [6.2. Finance Commands Summary](#62-finance-commands-summary)
+  - [6.3. Universal Commands Summary](#63-universal-commands-summary)
+- [7. FAQs [Chen Xihao]](#7-faqs-chen-xihao)
+  - [7.1. How do I migrate the data to another computer?](#71-how-do-i-migrate-the-data-to-another-computer)
+  - [7.2. How do I combine data from two devices?](#72-how-do-i-combine-data-from-two-devices)
+  - [7.3. Can I directly modify the storage file?](#73-can-i-directly-modify-the-storage-file)
+- [8. Glossary and Terms [Chen Xihao]](#8-glossary-and-terms-chen-xihao)
 
 ---
 
@@ -18,7 +52,7 @@ This User-Guide aims to aid users in using NUStorage to its fullest potential. I
 
 If you are a new user, we recommend that you read this user guide from start to the end and follow the examples provided in the [commands](#5-commands) section to gain a better understanding of the application. If you are an experienced user, feel free to use the Table-Of-Contents to skip to the section most relevant to you.
 
-If you see an acronym that you don't understand, kindly refer to the [glossary](#8-glossary-and-terms). If you have further questions regarding NUStorage or this User-Guide, feel free to contact us at _nustorage.support@u.nus.edu_.
+If you see an acronym that you don't understand, kindly refer to the [glossary](#8-glossary-and-terms-chen-xihao). If you have further questions regarding NUStorage or this User-Guide, feel free to contact us at _nustorage.support@u.nus.edu_.
 
 ## 2. Introduction [Lim Yu Yang]
 
@@ -30,7 +64,7 @@ NUStorage is optimised for store owners and managers who prefer to work with a c
 
 With proper usage, NUStorage can manage your inventory and finance records much faster than traditional GUI-based applications, streamlining your workflow and increasing productivity.
 
-Interested? Read on to get [started](#3-quick-start-guide)!
+Interested? Read on to get [started](#3-quick-start-guide-chen-xihao)!
 
 ---
 
@@ -58,7 +92,7 @@ Interested? Read on to get [started](#3-quick-start-guide)!
 
 ## 4. Command Formats [Chen Xihao]
 
-This section details the notations used to specify the command formats in the [commands](#5-commands) and [commands summary](#6-commands-summary) sections.
+This section details the notations used to specify the command formats in the [commands](#5-commands) and [commands summary](#6-commands-summary-chen-xihao) sections.
 
 <div markdown="block" class="alert alert-info">
 
@@ -87,7 +121,7 @@ This section details the notations used to specify the command formats in the [c
 * Range of valid inputs:
   * Commands that are expecting an `INDEX` parameter must ensure that the `INDEX` specified is a positive, non-zero integer that is not more than the number of items on the list.
   * Parameters that expect an integer must be between `0` and `2147483647`, with the exception of the `update_inventory` command.
-  More details of the `update_inventory` command can be read [here](#516-update-inventory-record-update_inventory).
+  More details of the `update_inventory` command can be read [here](#516-update-inventory-record-update_inventory-chen-xihao).
 
 </div>
 
@@ -99,7 +133,7 @@ This section shows the commands that can be used with NUStorage. It is divided i
 
 1. [Inventory commands](#51-inventory-commands)
 2. [Finance commands](#52-finance-commands)
-3. [Universal commands](#53-universal-commands)
+3. [Universal commands](#53-universal-commands-dora-heng)
 
 Accompanying the details of each command are figures that show an example of the command and the result of executing the command.
 
@@ -149,9 +183,9 @@ A corresponding finance record of total cost `200` is added to the finance accou
 
 #### 5.1.2. Remove items from inventory: `delete_inventory` [Goh Ee Liang]
 
-Previously in the [Add Inventory Records](#511-add-items-to-inventory-create_inventory) section, we have created a new inventory record, and its accompanying finance record. Now, let's try to delete the records from NUStorage using `delete_inventory`.
+Previously in the [Add Inventory Records](#511-add-items-to-inventory-create_inventory-goh-ee-liang) section, we have created a new inventory record, and its accompanying finance record. Now, let's try to delete the records from NUStorage using `delete_inventory`.
 
-If you are reading this section without having read the previous section, please ensure that your NUStorage application has at least one inventory record stored. If you are unclear on how to do so, refer to the [Add Inventory Records](#511-add-items-to-inventory-create_inventory) section.
+If you are reading this section without having read the previous section, please ensure that your NUStorage application has at least one inventory record stored. If you are unclear on how to do so, refer to the [Add Inventory Records](#511-add-items-to-inventory-create_inventory-goh-ee-liang) section.
 
 For the purpose of this section, we have created two other inventory records, you can add them in if you wish to. Our NUStorage now has three records as shown below:
 ![Inventory tab with three records](images/inventory_withThreeRecords.jpg)
@@ -181,9 +215,9 @@ The corresponding finance record is also deleted.
 
 #### 5.1.3. Edit record in inventory: `edit_inventory` [Goh Ee Liang]
 
-Previously in the [Delete Inventory Records](#512-remove-items-from-inventory-delete_inventory) section, we have deleted one of our inventory records. For this section, ensure that you have at least one inventory record.
+Previously in the [Delete Inventory Records](#512-remove-items-from-inventory-delete_inventory-goh-ee-liang) section, we have deleted one of our inventory records. For this section, ensure that you have at least one inventory record.
 
-If you are reading this section without having read the previous section, please ensure that your NUStorage application has at least one inventory record stored. If you are unclear on how to do so, refer to the [Add Inventory Records](#511-add-items-to-inventory-create_inventory) section.
+If you are reading this section without having read the previous section, please ensure that your NUStorage application has at least one inventory record stored. If you are unclear on how to do so, refer to the [Add Inventory Records](#511-add-items-to-inventory-create_inventory-goh-ee-liang) section.
 
 We will proceed with our example from the previous section with two records in NUStorage, you can add them in if you wish to.
 
@@ -219,12 +253,12 @@ The corresponding finance record is also updated to reflect the new total cost o
 
 #### 5.1.4. Find record in inventory: `find_inventory` [Lim Yu Yang]
 
-Previously in the [Edit Inventory Records](#513-edit-record-in-inventory-edit_inventory) section, we have learnt how to edit inventory records.
+Previously in the [Edit Inventory Records](#513-edit-record-in-inventory-edit_inventory-goh-ee-liang) section, we have learnt how to edit inventory records.
 Now, we are going to learn how to navigate through your inventory records using the `find_inventory` command.
 
 For this section, ensure that you have least three inventory records in NUStorage.
 This is not necessary for the functionality of this command but rather to make the outcome of the command clear.
-If you are having trouble adding additional inventory records, please refer to the [Add Inventory Records](#511-add-items-to-inventory-create_inventory) section.
+If you are having trouble adding additional inventory records, please refer to the [Add Inventory Records](#511-add-items-to-inventory-create_inventory-goh-ee-liang) section.
 
 After adding enough inventory records, your list would look something like this:
 ![Inventory with three records](images/anotherInventory_withThreeRecords.jpg)
@@ -255,16 +289,16 @@ __Result:__ All inventory records with item names that contain `ip` are listed.
 
 #### 5.1.5. List inventory records: `list_inventory` [Chen Xihao]
 
-Previously, in the [Find Inventory Records](#514-find-record-in-inventory-find_inventory) section, we have seen how we can find specific records using a specified keyword.
+Previously, in the [Find Inventory Records](#514-find-record-in-inventory-find_inventory-lim-yu-yang) section, we have seen how we can find specific records using a specified keyword.
 However, this results in NUStorage only displaying records with item names that contain the keyword.
 In order to revert back to the original listing, where every inventory record is listed, we can use the `list_inventory` command.
 
-For this section, we will be resuming where we left off in the [Find Inventory Records](#514-find-record-in-inventory-find_inventory) section.
+For this section, we will be resuming where we left off in the [Find Inventory Records](#514-find-record-in-inventory-find_inventory-lim-yu-yang) section.
 
 Our NUStorage currently looks like this:
 ![Inventory after find command](images/inventory_after_find_command.jpg)
 
-Even though we have three inventory records stored, we only have two displayed as we entered a [`find_inventory` command](#514-find-record-in-inventory-find_inventory).
+Even though we have three inventory records stored, we only have two displayed as we entered a [`find_inventory` command](#514-find-record-in-inventory-find_inventory-lim-yu-yang).
 
 **:information_source: What this command does:**
 
@@ -289,15 +323,15 @@ __Result:__ All inventory records are listed.
 
 #### 5.1.6. Update inventory record: `update_inventory` [Chen Xihao]
 
-In the [Edit Inventory Command](#513-edit-record-in-inventory-edit_inventory) section, we have learnt how to edit values and names of our inventory records.
+In the [Edit Inventory Command](#513-edit-record-in-inventory-edit_inventory-goh-ee-liang) section, we have learnt how to edit values and names of our inventory records.
 However, in many situations we would only need to update the quantity stored in the record based on the change in our inventory stock.
 It can get cumbersome if one were to have to calculate what the final quantity should be every time there is a change in inventory stock.
 This is where `update_inventory` comes in handy.
 
-For this section, we will be continuing where we left off previous in the [List Inventory Records](#515-list-inventory-records-list_inventory) section.
+For this section, we will be continuing where we left off previous in the [List Inventory Records](#515-list-inventory-records-list_inventory-chen-xihao) section.
 
 If you are reading this section without having following the examples provided in the previous sections, ensure that you have at least one inventory record stored in NUStorage.
-If you are having trouble adding inventory records, refer to the [Add Inventory Records](#511-add-items-to-inventory-create_inventory) section.
+If you are having trouble adding inventory records, refer to the [Add Inventory Records](#511-add-items-to-inventory-create_inventory-goh-ee-liang) section.
 
 Currently, our NUStorage looks like this:
 ![inventory with three records](images/inventory_after_list_command.jpg)
@@ -339,12 +373,12 @@ The following sections detail the commands related to finance storage in alphabe
 Commands in this section are best executed when you are in the finance tab.
 If you do not know how to switch to the finance tab, please refer to the [switch between tabs](#534-switch-tabs-switch) section for more information.
 
-**NOTE:** Some commands only work for [stand-alone finance records](#8-glossary-and-terms) (i.e. finance records that are not attached to any inventory records).
+**NOTE:** Some commands only work for [stand-alone finance records](#8-glossary-and-terms-chen-xihao) (i.e. finance records that are not attached to any inventory records).
 
 #### 5.2.1. Add finance records: `add_finance` [Tan Pinxi]
 
 NUStorage allows you to add and save a new finance record into the account.
-In the [Add Inventory Record](#511-add-items-to-inventory-create_inventory) section, we have seen how a finance record is added when an inventory record is created to reflect the changes in the finance account.
+In the [Add Inventory Record](#511-add-items-to-inventory-create_inventory-goh-ee-liang) section, we have seen how a finance record is added when an inventory record is created to reflect the changes in the finance account.
 However, there are times that you want to create a finance record independent of any inventory records to record an influx/outflow of funds for example.
 
 This is where `add_finance` comes in handy.
@@ -379,11 +413,11 @@ __Result:__ Finance record of amount `30000` on `3rd March 2020` is added to the
 
 #### 5.2.2. Delete finance records: `delete_finance` [Tan Pinxi]
 
-Previously, in the [Add Finance Records](#521-add-finance-records-add_finance) section, we have created a finance record.
+Previously, in the [Add Finance Records](#521-add-finance-records-add_finance-tan-pinxi) section, we have created a finance record.
 Now, let's try to delete it from NUStorage using `delete_finance`.
 
 If you are reading this section without having read the previous section, please ensure that your NUStorage application has at least one finance record stored. 
-If you are unclear on how to do so, refer to the [Add Finance Records](#521-add-finance-records-add_finance) section.
+If you are unclear on how to do so, refer to the [Add Finance Records](#521-add-finance-records-add_finance-tan-pinxi) section.
 
 **:information_source: What this command does:**
 
@@ -412,7 +446,7 @@ __Result:__ Finance record at index `1` is removed from the finance account.
 
 #### 5.2.3. Edit a finance record: `edit_finance` [Tan Pinxi]
 
-Previously, in the [Delete Finance Records](#522-delete-finance-records-delete_finance) section, we have deleted our only finance record in our application.
+Previously, in the [Delete Finance Records](#522-delete-finance-records-delete_finance-tan-pinxi) section, we have deleted our only finance record in our application.
 For this section, ensure you have at least one **stand-alone** finance record (i.e not attached to any inventory records) stored in the application and that you are on the finance tab.
 
 Your NUStorage application should currently look something like this:
@@ -449,11 +483,11 @@ __Result:__ Finance amount changed from `100` to `120` while the date remains un
 
 #### 5.2.4. Find a finance record with a specified keyword: `find_finance` [Lim Yu Yang]
 
-Previously, in the [Edit Finance Records](#523-edit-a-finance-record-edit_finance) section, we have learnt how to edit a stand-alone finance record.
+Previously, in the [Edit Finance Records](#523-edit-a-finance-record-edit_finance-tan-pinxi) section, we have learnt how to edit a stand-alone finance record.
 For this section, let us first add some more finance records to populate our finance account.
 
 Ensure that you have at least 2 finance records, preferably with differing amounts and dates, stored in NUStorage as well as that you are in the `Finance` tab before proceeding.
-If you are having trouble adding finance records refer to the sections on [Add Finance Records](#521-add-finance-records-add_finance) or [Add Inventory Records](#511-add-items-to-inventory-create_inventory).
+If you are having trouble adding finance records refer to the sections on [Add Finance Records](#521-add-finance-records-add_finance-tan-pinxi) or [Add Inventory Records](#511-add-items-to-inventory-create_inventory-goh-ee-liang).
 
 Currently, your NUStorage application should look something like this:
 ![Finance with three records](images/finance_withThreeRecords.jpg)
@@ -487,8 +521,8 @@ __Result:__ Finance records that fit the parameters are listed. Below shows the 
 
 #### 5.2.5. List finance records: `list_finance` [Lim Yu Yang]
 
-Previously, in the [Find Finance Records](#524-find-a-finance-record-with-a-specified-keyword-find_finance) section, we have learnt how to find certain finance records that contains our provided parameters.
-For this section, we will be reusing the examples from the [Find Finance Records](#524-find-a-finance-record-with-a-specified-keyword-find_finance) section.
+Previously, in the [Find Finance Records](#524-find-a-finance-record-with-a-specified-keyword-find_finance-lim-yu-yang) section, we have learnt how to find certain finance records that contains our provided parameters.
+For this section, we will be reusing the examples from the [Find Finance Records](#524-find-a-finance-record-with-a-specified-keyword-find_finance-lim-yu-yang) section.
 
 Currently, our NUStorage should look like this:
 ![Finance after Find Command](images/finance_after_find.jpg)
@@ -647,7 +681,7 @@ The following table gives a summary of the [__finance commands__](#52-finance-co
 
 ### 6.3. Universal Commands Summary
 
-The following table gives a summary of the [__universal commands__](#53-universal-commands) for quick reference and look-ups.
+The following table gives a summary of the [__universal commands__](#53-universal-commands-dora-heng) for quick reference and look-ups.
 
 |Description|Command and Example|
 |---|---|
