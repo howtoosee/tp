@@ -86,7 +86,7 @@ This section details the notations used to specify the command formats in the [c
   * E.g. the `edit_finance` command, excluding the `INDEX` field, has only two optional fields: `amt` and `at`. Either the `amt` or `at` fields need to be filled up.
 * Range of valid inputs:
   * Commands that are expecting an `INDEX` parameter must ensure that the `INDEX` specified is a positive, non-zero integer that is not more than the number of items on the list.
-  * Parameters that expect an integer must be between `0` and `2147483647`, with the exception of the `update_inventory` command.
+  * Parameters that expect an integer must be between `0` and `2000000000`, with the exception of the `update_inventory` command.
   More details of the `update_inventory` command can be read [here](#516-update-inventory-record-update_inventory-chen-xihao).
 
 </div>
